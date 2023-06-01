@@ -56,11 +56,11 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/Remake Roleta.loader.js";
+      var loaderUrl = buildUrl + "/remake-roleta-webgl.loader.js";
       var config = {
-        dataUrl: buildUrl + "/Remake Roleta.data",
-        frameworkUrl: buildUrl + "/Remake Roleta.framework.js",
-        codeUrl: buildUrl + "/Remake Roleta.wasm",
+        dataUrl: buildUrl + "/remake-roleta-webgl.data",
+        frameworkUrl: buildUrl + "/remake-roleta-webgl.framework.js",
+        codeUrl: buildUrl + "/remake-roleta-webgl.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "Roleta Remake",
@@ -83,13 +83,11 @@
         meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
         document.getElementsByTagName('head')[0].appendChild(meta);
         container.className = "unity-mobile";
+        canvas.className = "unity-mobile";
 
         // To lower canvas resolution on mobile devices to gain some
         // performance, uncomment the following line:
         // config.devicePixelRatio = 1;
-
-        canvas.style.width = window.innerWidth + 'px';
-        canvas.style.height = window.innerHeight + 'px';
 
         unityShowBanner('WebGL builds are not supported on mobile devices.');
       } else {
